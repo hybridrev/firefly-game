@@ -18,20 +18,21 @@ public class MyWorld extends World
     {
         // setting object
         Firefly firefly = new Firefly();
-        addObject(firefly,0,0);
+        addObject(firefly,100,250);
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<5;i++){
             Swarm swarm = new Swarm(i);
-            addObject(swarm, Greenfoot.getRandomNumber(250), 
-                Greenfoot.getRandomNumber(250));
+            addObject(swarm,846, 
+                Greenfoot.getRandomNumber(480));
         }
         Memetic memetic = new Memetic();
-        addObject(memetic,129,92);
+        addObject(memetic,846,
+            Greenfoot.getRandomNumber(480));
         
         score.setValue(0);
-        addObject(score,47,17);
+        addObject(score,55,25);
         hp.setValue(20);
-        addObject(hp, 47, 47);
+        addObject(hp, 150, 25);
     }
     
     GreenfootSound music = new GreenfootSound("music.wav");

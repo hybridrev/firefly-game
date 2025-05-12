@@ -3,7 +3,7 @@ import greenfoot.*;
 public class Memetic extends Enemy
 {
     public Memetic(){
-        super(3);
+        super(20);
     }
     public void act()
     {

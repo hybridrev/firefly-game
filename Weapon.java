@@ -7,8 +7,8 @@ public class Weapon extends Actor
     }
     public void act() 
     {
-        setLocation(getX(), getY()-40);
-        if(getY()<=50){
+        setLocation(getX()+50, getY());
+        if(getX()>=830){
             getWorld().removeObject(this);
         }
     }    
