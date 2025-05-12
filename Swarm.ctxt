@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Swarm
+comment1.params=
+comment1.target=Swarm()
+comment2.params=tipe
+comment2.target=Swarm(int)
+comment3.params=
+comment3.target=void\ act()
+numComments=4
