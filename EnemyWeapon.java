@@ -3,7 +3,7 @@ import greenfoot.*;
 public class EnemyWeapon extends Actor
 {
     public EnemyWeapon(){
-        setImage("Weapon.png");
+        setImage("EnemyWeapon.png");
     }
 
     public void act() 
@@ -19,15 +19,16 @@ public class EnemyWeapon extends Actor
 
         // Cek tabrakan dengan Firefly
         if (isTouching(Firefly.class)) {
-            MyWorld world = (MyWorld)getWorld();
-            world.hp.add(-1);
+            MyWorld world = (MyWorld) getWorld();
+            int currentHP = MyWorld.hp.getCurrentHealth();    // dapatkan nilai HP sekarang
+                MyWorld.hp.updateHealth(currentHP - 1);           // kurangi 1 dan update health bar
 
-            if (world.hp.getValue() == 0) {
+            if (MyWorld.hp.getCurrentHealth() == 0) {
                 Lose g = new Lose();
                 getWorld().addObject(g, 420, 240);
-                Greenfoot.stop();
+                Greenfoot.stop();               
             }
-
+            
             getWorld().removeObject(this);
         }
     }    

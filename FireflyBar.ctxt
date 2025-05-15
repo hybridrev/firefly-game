@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=FireflyBar
+comment1.params=hp
+comment1.target=FireflyBar(int)
+comment2.params=hp
+comment2.target=void\ update(int)
+comment3.params=
+comment3.target=void\ updateImage()
+comment4.params=value
+comment4.target=void\ updateHealth(int)
+comment5.params=
+comment5.target=int\ getCurrentHealth()
+numComments=6

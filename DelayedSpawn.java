@@ -7,6 +7,9 @@ public class DelayedSpawn extends Actor {
     public DelayedSpawn(int delay, int tipe) {
         this.delay = delay;
         this.tipe = tipe;
+        
+        GreenfootImage img = new GreenfootImage(1, 1); // ukuran 1x1 px transparan
+        setImage(img);
     }
 
     public void act() {

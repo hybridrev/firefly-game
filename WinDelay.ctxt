@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=WinDelay
+comment1.params=delayFrames
+comment1.target=WinDelay(int)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

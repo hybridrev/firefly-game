@@ -3,15 +3,16 @@ import greenfoot.*;
 public class Firefly extends Actor
 {
     Firefly(){
-        setImage("Firefly.png");
+        setImage("SpaceStation.png");
     }
     int hitung=0;
+    boolean keyHeld = false;
     public void act()
     {
         // mengambil data input dari mouse
         if(Greenfoot.mouseDragged(this)){
             MouseInfo m = Greenfoot.getMouseInfo();
-            setLocation(m.getX(), m.getY());
+            setLocation(getX(), m.getY());
         }
         // mengambil data input dari keyboard
         if(Greenfoot.isKeyDown("a")){
@@ -21,19 +22,28 @@ public class Firefly extends Actor
             setLocation(getX() + 5, getY()); // kanan
         }
         if(Greenfoot.isKeyDown("w")){
-            setLocation(getX(), getY() - 5); // atas
+            setLocation(getX(), getY() - 10); // atas
         }
         if(Greenfoot.isKeyDown("s")){
-            setLocation(getX(), getY() + 5); // bawah
+            setLocation(getX(), getY() + 10); // bawah
         }
         // peluru yang dikeluarkan
+        if(Greenfoot.isKeyDown("space")){
+            keyHeld = true;
+        } else {
+            keyHeld = false;
+        }
+        
+        if (keyHeld) {
         hitung++;
-        if(hitung==10){
-            hitung=0;
-            Weapon weapon = new Weapon(); 
-            getWorld().addObject(weapon,getX(),getY());
-            // suara
-            Greenfoot.playSound("Proyektil.wav");
+            if (hitung >= 5) {
+                hitung = 0;
+                Weapon weapon = new Weapon(); 
+                getWorld().addObject(weapon, getX(), getY());
+                Greenfoot.playSound("peluru1.wav");
+            }
+        } else {
+        hitung = 0;
         }
     }
 }
