@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=MessageOverlay
+comment1.params=message\ width\ height
+comment1.target=MessageOverlay(java.lang.String,\ int,\ int)
+numComments=2

@@ -4,17 +4,50 @@ public class Enemy extends Actor
 {
     int tipe;
     int hp;
+    
     private boolean reachedTarget = false;
     private int targetX;
     private int target3;
     private int dy;
     private int direction;
+    
     private HealthBar healthBar;
+    
+    // animasi swarm
+    private int frameCounter = 0;
+    private int frameDelay = 2;
+    private int currentFrame = 1; // nilai 1 atau 2
 
-    public Enemy(){
+    public Enemy() {
         tipe = 3;
-        setImage("Swarm.png");
+        setImage("Swarm" + tipe + "_1.png"); // gambar awal
     }
+    
+    public void hitSwarm() {
+        // Efek berkedip/animasi
+        GreenfootImage img = getImage();
+        img.setTransparency(150); // semi transparan
+        setImage(img);
+
+        // Tambah suara efek (opsional)
+        // Greenfoot.playSound("hit.wav"); // pastikan file "hit.wav" ada di folder sounds/
+
+        // Timer untuk mengembalikan normal (bisa pakai delay frame)
+        Greenfoot.delay(5); // pause sebentar
+        img.setTransparency(255); // normal kembali
+        setImage(img);
+    }
+    
+    // animasi swarm
+    private void animate() {
+        frameCounter++;
+        if (frameCounter >= frameDelay) {
+            frameCounter = 0;
+            currentFrame = (currentFrame == 1) ? 2 : 1;
+            setImage("Swarm" + tipe + "_" + currentFrame + ".png");
+        }
+    }
+    
     public Enemy(int tipe){
         this.tipe = tipe;
         switch (tipe) {
@@ -36,10 +69,11 @@ public class Enemy extends Actor
             break;
         }
 
-        setImage("Swarm"+tipe+".png");
+        setImage("Swarm" + tipe + "_1.png");
         
-        target3 = 750;
-        targetX = Greenfoot.getRandomNumber(100) + 550;
+        // posisi swarm ngespawn dan bolak balik
+        target3 = 770;
+        targetX = Greenfoot.getRandomNumber(100) + 520;
             if (tipe == 3) {
                 dy = 2;
             } else {
@@ -59,13 +93,14 @@ public class Enemy extends Actor
     
     public void act()
     {
+        animate();
         hitung++;
         if (hitung >= batasTembak) {
             hitung=0;
             EnemyWeapon semburan = new EnemyWeapon(); 
             getWorld().addObject(semburan,getX(),getY());
             // suara
-            // Greenfoot.playSound("peluru1.wav");
+            Greenfoot.playSound("Swarm.wav");
         }
         if (!reachedTarget) {
             // Gerak ke kiri dulu
@@ -110,20 +145,6 @@ public class Enemy extends Actor
                 MyWorld.score.add(1); //Skor
                 meledak();
             }
-        }
-        
-        //jika karakter bertabrakan dengan musuh = hancur
-        else if(isTouching(Firefly.class)){
-            MyWorld world = (MyWorld) getWorld();
-            int currentHP = MyWorld.hp.getCurrentHealth();    // dapatkan nilai HP sekarang
-                MyWorld.hp.updateHealth(currentHP - 1);           // kurangi 1 dan update health bar
-
-            if (MyWorld.hp.getCurrentHealth() == 0) {
-                Lose g = new Lose();
-                getWorld().addObject(g, 420, 240);
-                Greenfoot.stop();               
-            }
-            meledak();            
         }
         
         if (tipe == 3 && healthBar != null && getWorld() != null) {
@@ -174,3 +195,4 @@ public class Enemy extends Actor
         getWorld().removeObject(this);
     }
 }
+

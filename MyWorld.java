@@ -35,31 +35,47 @@ public class MyWorld extends World
         bg.drawImage(bg2, scrollX + bg1.getWidth(), 0);
 
         setBackground(bg);
+        
+        if (tipsOverlay != null) {
+            tipsTimer--;
+            if (tipsTimer <= 0) {
+                removeObject(tipsOverlay);
+                tipsOverlay = null;
+            }
+        }
+
     }
     
     private boolean memeticSpawned = false;
     private boolean swarmStarted = false;
 
+    // kasih delay swarm untuk muncul
     private int delayMemetic = 100000; // 1 detik (jika 60 FPS)
     private int delaySwarm = 360;  // 2 detik setelah Memetic muncul
-
     private int delayTimer = 0;
 
-    private int[] jumlahTipe = {10, 5, 2};
+    // mengatur jumlah swarm dari index 0 sampai 2
+    private int[] jumlahTipe = {10, 5, 3};
     private int currentTipe = 0;
     private int currentJumlah = 0;
     private int spawnDelay = 20;
     private int spawnTimer = spawnDelay; 
     
+    private int tipsTimer = 300; // 5 detik di 60 FPS
+    private MessageOverlay tipsOverlay;
+    
     private void setupScene() {
+        tipsOverlay = new MessageOverlay("Objective: Kill Boss Swarm to win a game!", 860, 60);
+        addObject(tipsOverlay, getWidth()/2, 60); // posisikan di atas layar
+        
         // setting object
         Firefly firefly = new Firefly();
             addObject(firefly,130,250);
 
         score.setValue(0);
-        addObject(score,55,25);
+        addObject(score,40,469);
         // atur darah
-        addObject(hp, 115, 470);
+        addObject(hp, 180, 470);
         hp.updateHealth(20);
     }
     
@@ -102,15 +118,5 @@ public class MyWorld extends World
             }
         }
     }
-    
-    // GreenfootSound music = new GreenfootSound("music.wav");
-    
-    //public void started(){
-    //    music.playLoop();
-    //}
-    
-    //public void stopped() {
-    //    music.pause(); 
-    //}
 }
 
