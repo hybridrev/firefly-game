@@ -1,32 +1,44 @@
-# 🎮 My Awesome Game
+<p align="center">
+  <img src="images/gameName.png" alt="Gameplay" width="600"/>
+</p>
 
-Sebuah game 2D sederhana buatan saya menggunakan Greenfoot. Pemain harus bertahan dari serangan musuh seperti **Memetic** dan **Swarm** sebanyak mungkin!
+# 🎮 Swarm Disaster
 
-![Gameplay Screenshot](assets/screenshot1.png)
+Sebuah hasil dari remake game 2D yang pernah dibuat sebelumnya di Greenfoot. Desain karakter dan konsep latar diambil dari game berjudul **Honkai: Star rail**.
 
-## 🔥 Fitur
+<br>
 
-- 🧠 Musuh AI dinamis (Memetic & Swarm)
-- ❤️ Health bar untuk musuh Memetic
-- 🎯 Score sistem real-time
-- 💥 Efek suara dan animasi
+## 🔥 Modded
 
-## 📷 Screenshot Tambahan
+- 🧠 Random enemies movement
+- ❤️ Health bar boss
+- 🎯 User Interface
+- 💥 Sound effect and animation
 
-| Gameplay | Musuh Memetic |
-|---------|----------------|
-| ![Gameplay](assets/screenshot2.png) | ![Memetic](assets/memetic_healthbar.png) |
+<br>
 
-## 🛠 Teknologi
+## 🛠 Software 
 
-- Java + Greenfoot
-- Audacity (untuk efek suara)
-- Photoshop (untuk grafis)
-- Git & GitHub (versi kontrol)
+- Greenfoot
+- Audition 
+- Photoshop 
+
+<br>
 
 ## 🚀 Cara Menjalankan
 
-1. Clone repo ini:
+1. Clone repo:
    ```bash
-   git clone https://github.com/username/my-awesome-game.git
-   cd my-awesome-game
+   git clone https://github.com/hybridrev/swarm-disaster.git
+
+2. Jalankan dengan software Greenfoot
+
+<br>
+
+## 📷 Screenshots
+
+![Gameplay](images/Background.png)
+
+---
+
+© 2025 Herlambang Natanegara, Muhammad Agung, & Taufik Agung Pranomo
