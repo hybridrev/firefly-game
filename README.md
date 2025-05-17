@@ -25,13 +25,13 @@ Sebuah hasil dari remake game 2D yang pernah dibuat sebelumnya di Greenfoot. Des
 
 <br>
 
-## 🚀 Cara Menjalankan
+## 🚀 How to run
 
 1. Clone repo:
    ```bash
    git clone https://github.com/hybridrev/swarm-disaster.git
 
-2. Jalankan dengan software Greenfoot
+2. Jalankan dengan software Greenfoot dengan membuka file bernama **project.greenfoot**
 
 <br>
 
