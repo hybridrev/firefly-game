@@ -41,4 +41,4 @@ Sebuah hasil dari remake game 2D yang pernah dibuat sebelumnya di Greenfoot. Des
 
 ---
 
-© 2025 Herlambang Natanegara, Muhammad Agung, & Taufik Agung Pranomo
+© 2025 Herlambang Natanegara, Muhammad Agung, Taufik Agung Pranomo & Karinina Kezia
