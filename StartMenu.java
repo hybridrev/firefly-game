@@ -8,9 +8,6 @@ public class StartMenu extends World {
     private GreenfootImage bg1;
     private GreenfootImage bg2;
     private int scrollX;
-    
-    public static FireflyBar hp = new FireflyBar(10);
-    static Board score = new Board("");
 
     public StartMenu()
     {    

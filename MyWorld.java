@@ -55,7 +55,7 @@ public class MyWorld extends World
     private int delayTimer = 0;
 
     // mengatur jumlah swarm dari index 0 sampai 2
-    private int[] jumlahTipe = {10, 5, 3};
+    private int[] jumlahTipe = {12, 5, 3};
     private int currentTipe = 0;
     private int currentJumlah = 0;
     private int spawnDelay = 20;

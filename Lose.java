@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class Lose extends Actor
+public class Lose extends End
 {
     Lose(){
         setImage("Lose.png");

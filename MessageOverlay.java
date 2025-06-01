@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class MessageOverlay extends Actor {
+public class MessageOverlay extends Menu {
     public MessageOverlay(String message, int width, int height) {
         GreenfootImage img = new GreenfootImage(width, height);
 

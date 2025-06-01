@@ -1,7 +1,7 @@
 // AboutButton.java
 import greenfoot.*;
 
-public class AboutButton extends Actor {
+public class AboutButton extends Menu {
     public AboutButton() {
         setImage("aboutButton.png"); // Gambar tombol about
     }

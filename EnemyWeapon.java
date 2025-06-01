@@ -1,6 +1,6 @@
 import greenfoot.*; 
 
-public class EnemyWeapon extends Actor
+public class EnemyWeapon extends Enemy
 {
     public EnemyWeapon(){
         setImage("EnemyWeapon.png");
@@ -26,8 +26,8 @@ public class EnemyWeapon extends Actor
                 f.kenaHit(); // efek visual
             }
             
-            int currentHP = MyWorld.hp.getCurrentHealth();    // dapatkan nilai HP sekarang
-                MyWorld.hp.updateHealth(currentHP - 1);           // kurangi 1 dan update health bar
+            int currentHP = MyWorld.hp.getCurrentHealth();  // dapatkan nilai HP sekarang
+                MyWorld.hp.updateHealth(currentHP - 1);    // kurangi 1 dan update health bar
 
             if (MyWorld.hp.getCurrentHealth() == 0) {
                 Lose g = new Lose();

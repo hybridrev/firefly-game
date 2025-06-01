@@ -1,7 +1,7 @@
 // PlayButton.java
 import greenfoot.*;
 
-public class PlayButton extends Actor {
+public class PlayButton extends Menu {
     public PlayButton() {
         setImage("playButton.png"); // Gambar tombol play
     }

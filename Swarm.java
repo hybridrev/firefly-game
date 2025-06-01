@@ -12,6 +12,5 @@ public class Swarm extends Enemy
     {
         super.act();
         turn(0);
-
     }
 }

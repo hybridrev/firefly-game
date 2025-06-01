@@ -1,7 +1,7 @@
 // BackButton.java
 import greenfoot.*;
 
-public class BackButton extends Actor {
+public class BackButton extends Menu {
     public BackButton() {
         setImage("backButton.png");
     }

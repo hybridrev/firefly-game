@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class Win extends Actor
+public class Win extends End
 {
     Win(){
         setImage("Win.png");
